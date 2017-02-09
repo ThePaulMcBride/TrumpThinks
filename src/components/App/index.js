@@ -11,7 +11,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.generateQuote(this.getUrlParameter('name'));
+    const name = this.getUrlParameter('name');
+
+    if (name) {
+      this.generateQuote(name);
+    }
   }
 
   generateQuote = (name) => {
