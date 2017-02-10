@@ -8,6 +8,8 @@
   vertical-align:middle;
 	white-space:normal;
 	line-height:1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .name-form input:focus {

@@ -26,7 +26,6 @@ class Form extends Component {
         <input type='submit' className='submit' value='Another' onClick={this.props.refresh} />
         <input type='submit' className='submit reset' value='Reset' onClick={this.props.reset} />
       </div>
-
     );
   }
 
