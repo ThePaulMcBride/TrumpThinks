@@ -4,6 +4,7 @@
   margin: 1.5em 0;
   padding: 0.5em 0;
   quotes: "\201C""\201D""\2018""\2019";
+  position: relative;
 }
 
 .quote:before {
@@ -14,6 +15,18 @@
   margin-right: 10px;
   vertical-align: -0.3em;
 }
+
+.quote:after {
+  color: #D4274B;
+  content: close-quote;
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 10px;
+  vertical-align: -0.3em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 .quote p {
   display: inline;
 }
@@ -23,9 +36,4 @@
   font-size: 14px;
   display: block;
   margin-top: 15px;
-  margin-left: 30px;
-}
-
-.quote cite:before {
-  content: "\2014 \2009";
 }

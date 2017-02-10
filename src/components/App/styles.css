@@ -5,6 +5,17 @@ body,
 }
 
 .app {
+
+}
+
+.app-header {
+  background-color: #D4274B;
+  padding: 5px 15px;
+  color: white;
+  width: 100%;
+}
+
+.container {
   text-align: left;
   display: -webkit-box;
   display: -moz-box;
@@ -13,13 +24,7 @@ body,
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-}
-
-.app-header {
-  background-color: #D4274B;
-  padding: 5px 15px;
-  color: white;
-  flex: 1 100%;
+  justify-content: center;
 }
 
 .app-column-1 {
@@ -37,10 +42,14 @@ body,
   /* We tell both sidebars to share a row */
   .app-column-1 {
     flex: 2;
+    flex-basis: auto;
+    max-width: 400px;
     padding: 0 15px 0 50px;
   }
   .app-column-2 {
     flex: 3;
+    flex-basis: auto;
+    max-width: 400px;
     padding: 0 50px 0 15px;
   }
 }

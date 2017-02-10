@@ -64,18 +64,23 @@ class App extends Component {
         <div className="app-header">
           <h2>Trump Thinks</h2>
         </div>
-        <div className="app-column-1">
-          <TrumpImage />
+        <div className="container">
+          <div className="app-column-1">
+            <TrumpImage />
+          </div>
+          <div className="app-column-2">
+            {
+              (!this.state.quote)
+                ? <p className="app-intro">What does Donald Trump think of you?</p>
+                : null
+            }
+            <Quote quote={this.state.quote}/>
+            <Form getQuote={this.generateQuote}/>
+          </div>
         </div>
-        <div className="app-column-2">
-          <p className="app-intro">
-            What does Donald Trump think of you?
-          </p>
-          <Quote quote={this.state.quote}/>
-          <Form getQuote={this.generateQuote}/>
-        </div>
+
         <div className="app-footer">
-          
+
         </div>
       </div>
     );

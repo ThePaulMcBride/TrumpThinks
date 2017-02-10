@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './styles.css';
 
 class Form extends React.Component {
   state = {
@@ -19,12 +20,9 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.submitName}>
-        <label className='label'>
-          Your Name:
-          <input type='text' name='name' placeholder='Your name' value={this.state.name} onChange={this.onNameChange}/>
-        </label>
-
+      <form onSubmit={this.submitName} className='name-form'>
+        <input type='text' name='name' className='name-field' placeholder='Your name' value={this.state.name} onChange={this.onNameChange}/>
+        <input type='submit' className='submit' />
       </form>
     );
   }

@@ -1,0 +1,25 @@
+.name-form {
+  text-align: center;
+}
+
+.name-form input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name-field {
+  padding: 10px;
+  width: 260px;
+  max-width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.submit {
+  background-color: #D4274B;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+}
