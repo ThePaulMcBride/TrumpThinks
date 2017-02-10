@@ -1,25 +1,35 @@
 .name-form {
-  text-align: center;
+  text-align: left;
+  width: 100%;
 }
 
 .name-form input {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  vertical-align:middle;
+	white-space:normal;
+	line-height:1;
+}
+
+.name-form input:focus {
+	outline:0;
 }
 
 .name-field {
   padding: 10px;
-  width: 260px;
-  max-width: 100%;
+  width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border: 1px solid #CCCCCC;
 }
 
 .submit {
   background-color: #D4274B;
   border: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 18px;
   padding: 10px 15px;
+}
+
+.reset {
+  margin-left: 10px;
 }

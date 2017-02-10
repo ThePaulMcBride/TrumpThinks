@@ -1,18 +1,13 @@
+* {
+  -webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	box-sizing:content-box;
+}
+
 html,
 body,
 #root {
   height: 100%;
-}
-
-.app {
-
-}
-
-.app-header {
-  background-color: #D4274B;
-  padding: 5px 15px;
-  color: white;
-  width: 100%;
 }
 
 .container {

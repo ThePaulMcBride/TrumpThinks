@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './styles.css';
 
+import Header from '../Header';
 import Quote from '../Quote';
 import Form from '../Form';
 import TrumpImage from '../TrumpImage';
 
 class App extends Component {
   state = {
+    name: '',
     quote: undefined
   }
 
@@ -17,6 +19,30 @@ class App extends Component {
     if (name) {
       this.generateQuote(name);
     }
+  }
+
+  updateName = (name) => {
+    this.setState({ name: name });
+
+    setTimeout(() => console.log(this.state.name), 500);
+  }
+
+  submitForm = () => {
+    if (this.state.name.trim().length) {
+      this.generateQuote(this.state.name.trim());
+    }
+
+  }
+
+  reset = () => {
+    this.setState({
+      name: '',
+      quote: undefined
+    });
+  }
+
+  refresh = () => {
+    this.generateQuote(this.state.name);
   }
 
   generateQuote = (name) => {
@@ -46,7 +72,7 @@ class App extends Component {
 
     // If the "search" string exists, then build params from it
     if (urlQueryString) {
-        const keyRegex = new RegExp('([\?&])' + key + '[^&]*');
+        const keyRegex = new RegExp('([?&])' + key + '[^&]*');
 
         // If param exists already, update it
         if (urlQueryString.match(keyRegex) !== null) {
@@ -61,10 +87,8 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="app-header">
-          <h2>Trump Thinks</h2>
-        </div>
         <div className="container">
+          <Header />
           <div className="app-column-1">
             <TrumpImage />
           </div>
@@ -75,7 +99,14 @@ class App extends Component {
                 : null
             }
             <Quote quote={this.state.quote}/>
-            <Form getQuote={this.generateQuote}/>
+            <Form
+              name={this.state.name}
+              quote={this.state.quote}
+              getQuote={this.submitForm}
+              updateName={this.updateName}
+              refresh={this.refresh}
+              reset={this.reset}
+            />
           </div>
         </div>
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 
-class Quote extends React.Component {
+class Quote extends Component {
 
   render() {
     if (this.props.quote) {
