@@ -1,0 +1,55 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.app {
+  text-align: left;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.app-header {
+  background-color: #D4274B;
+  padding: 5px 15px;
+  color: white;
+  flex: 1 100%;
+}
+
+.app-column-1 {
+  flex: 1 100%;
+  padding: 0 20px
+}
+
+.app-column-2 {
+  flex: 1 100%;
+  align-self: center;
+  padding: 0 20px;
+}
+
+@media all and (min-width: 600px) {
+  /* We tell both sidebars to share a row */
+  .app-column-1 {
+    flex: 2;
+    padding: 0 15px 0 50px;
+  }
+  .app-column-2 {
+    flex: 3;
+    padding: 0 50px 0 15px;
+  }
+}
+
+.app-footer {
+  flex: 1 100%;
+}
+
+.app-intro {
+  font-size: 32px;
+  color: #D4274B;
+}

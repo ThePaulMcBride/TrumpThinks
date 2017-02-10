@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import './style.css';
 
 class Quote extends React.Component {
 
   render() {
     if (this.props.quote) {
-      return <h3>{this.props.quote}</h3>
+      return <blockquote className="quote">
+        <p>{this.props.quote}</p>
+        <cite>Donald Trump</cite>
+      </blockquote>
     }
     return null;
   }

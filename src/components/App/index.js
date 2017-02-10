@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './App.css';
+import './styles.css';
 
 import Quote from '../Quote';
 import Form from '../Form';
+import TrumpImage from '../TrumpImage';
 
 class App extends Component {
   state = {
@@ -23,7 +24,6 @@ class App extends Component {
 
     axios.get(`https://api.whatdoestrumpthink.com/api/v1/quotes/personalized?q=${name}`)
       .then((response) => {
-        console.log(response.data.message);
         this.setState({quote: response.data.message});
       })
       .catch(function (error) {
@@ -60,15 +60,23 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
+      <div className="app">
+        <div className="app-header">
           <h2>Trump Thinks</h2>
         </div>
-        <p className="App-intro">
-          What does Donald Trump think of you?
-        </p>
-        <Quote quote={this.state.quote}/>
-        <Form getQuote={this.generateQuote}/>
+        <div className="app-column-1">
+          <TrumpImage />
+        </div>
+        <div className="app-column-2">
+          <p className="app-intro">
+            What does Donald Trump think of you?
+          </p>
+          <Quote quote={this.state.quote}/>
+          <Form getQuote={this.generateQuote}/>
+        </div>
+        <div className="app-footer">
+          
+        </div>
       </div>
     );
   }
