@@ -5,3 +5,7 @@
   color: white;
   width: 100%;
 }
+
+.app-header h2 {
+  margin: 12px 0;
+}

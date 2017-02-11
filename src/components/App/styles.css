@@ -2,13 +2,7 @@
   -webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
-}
-
-html,
-body,
-#root {
-  height: 100%;
-}
+}  
 
 .container {
   display: -webkit-box;
@@ -49,17 +43,14 @@ body,
 }
 
 .app-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   right: 0;
   padding: 0 40px;
-  background-color: #D4274B;
-  color: #ffffff;
+  color: #cccccc;
+  font-size: 13px;
 }
 
 a {
-  color: #FFFFFF;
+  color: #cccccc;
 }
 
 .app-intro {
