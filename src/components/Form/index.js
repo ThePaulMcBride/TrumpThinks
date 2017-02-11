@@ -22,7 +22,7 @@ class Form extends Component {
 
   renderButtons() {
     return (
-      <div>
+      <div className='button-container'>
         <input type='submit' className='submit' value='Another' onClick={this.props.refresh} />
         <input type='submit' className='submit reset' value='Reset' onClick={this.props.reset} />
       </div>

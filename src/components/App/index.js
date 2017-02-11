@@ -23,7 +23,6 @@ class App extends Component {
 
   updateName = (name) => {
     this.setState({ name: name });
-
     setTimeout(() => console.log(this.state.name), 500);
   }
 
@@ -31,7 +30,6 @@ class App extends Component {
     if (this.state.name.trim().length) {
       this.generateQuote(this.state.name.trim());
     }
-
   }
 
   reset = () => {
@@ -111,7 +109,7 @@ class App extends Component {
         </div>
 
         <div className="app-footer">
-
+          <p>Built by <a href='https://twitter.com/ThePaulMcBride'>@ThePaulMcBride</a> | Illustration by <a href='http://avatars.design/'>http://avatars.design</a></p>
         </div>
       </div>
     );

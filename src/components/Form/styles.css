@@ -1,5 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
 .name-form {
-  text-align: left;
   width: 100%;
 }
 
@@ -30,6 +33,23 @@
   color: #FFFFFF;
   font-size: 18px;
   padding: 10px 15px;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 800px) {
+  .submit {
+    margin: 0;
+  }
+}
+
+.button-container {
+  text-align: center;
+}
+
+@media all and (min-width: 800px) {
+  .button-container {
+    text-align: left;
+  }
 }
 
 .reset {

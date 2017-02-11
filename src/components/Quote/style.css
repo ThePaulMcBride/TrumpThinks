@@ -5,6 +5,13 @@
   padding: 0.5em 0;
   quotes: "\201C""\201D""\2018""\2019";
   position: relative;
+  text-align: center;
+}
+
+@media all and (min-width: 800px) {
+  .quote {
+    text-align: left;
+  }
 }
 
 .quote:before {
@@ -12,8 +19,9 @@
   content: open-quote;
   font-size: 3em;
   line-height: 0.1em;
-  margin-right: 10px;
-  vertical-align: -0.3em;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .quote:after {
